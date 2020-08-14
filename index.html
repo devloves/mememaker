@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/konva@6.0.0/konva.min.js"></script>
+  <meta charset="utf-8"/>
+  <title>Meme Maker Yay!</title>
+  <meta name="title" content="Meme Maker" />
+  <meta
+      name="description"
+      content="This is a meme maker ¯\_(ツ)_/¯ made by Bowiee#2846"
+  />
+  <meta name="author" content="Bowiee#2846" />
+  <meta property="og:title" content="Meme Maker" />
+  <meta
+    property="og:description"
+    content="This is a meme maker ¯\_(ツ)_/¯ made by Bowiee#2846"
+  />
+  <meta property="og:image" content="hhttps://i.kym-cdn.com/photos/images/facebook/001/505/718/136.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+
+<div class="temp">
+  <h1>Choose a Template..</h1>
+  <h2>Click on the template to apply it :D</h2>
+  <div class="row">
+      <div class="column">
+      <img src="https://i.pinimg.com/736x/54/ae/da/54aeda448f78529ab27df5c9a158bffe.jpg" class="telp">
+      </div>
+      <div class="column">
+      <img src="https://media.discordapp.net/attachments/722511395211575377/723562991521497098/na55kzt1wup21.jpg" class="telp">
+      </div>
+  </div>
+  <div class="row">
+      <div class="column">
+      <img src="https://media.discordapp.net/attachments/722511395211575377/723563026225037372/300px-Jim_Halpert_Pointing_to_Whiteboard.jpg" class="telp">
+      </div>
+      <div class="column">
+      <img src="https://imgflip.com/s/meme/Drake-Hotline-Bling.jpg" class="telp">
+      </div>
+  </div>
+  <h2 id="hed" style="font-size: 20px;" hidden="">Image Link: <input type="text" name="templatelink" id="tsrc"></h2>
+  <button style="background: transparent; border: 2px solid white; outline: none; padding-top: 10px; padding-bottom: 10px;
+  padding-left: 10px; padding-right: 10px; color: #fff; margin-top: 10px; font-size: 20px;" id="upl" type="submit" hidden="">Upload!</button>
+  <br>
+  <button id="teu" class="btn"><h2 style="
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+  ">Upload A Template</h2></button>
+</div>
+
+  <div style="margin-top: 20px">
+  <h1 class="heading">Preview</h1>
+    <div id="cont" style="background: tomato;width:550px;height:500px;justify-content:center;margin: auto;">
+     <div class="konvajs-content" role="presentation" style="position: relative; user-select: none; width: 550px; height: 500px;">
+      <canvas width="550" height="500" style="padding: 0px; margin: 0px; border: 0px; background: transparent; position: absolute; top: 0px; left: 0px; width: 550px; height: 500px; display: block;">
+      </canvas>
+     </div>
+    </div>
+  </div>
+  <div style="margin-top: 20px;
+  padding-left: 50px;
+  text-align: left;">
+  <h1 style="font-weight: 500;text-align: left;margin-top: 0;">Panel</h1>
+
+  <h2 style="
+    font-weight: 300;
+    text-align: left;
+    display: grid;
+    gap: 6px;
+    padding-right: 50px;
+    grid-template-columns: 140px 1fr;
+">
+  Font Size :<span><input type="range" name="ageInputName" id="ageInputId" value="24" min="16" max="100" oninput="ageOutputId.value =ageInputId.value"> <output name="ageOutputName" id="ageOutputId">24</output></span>
+     
+      
+      <label for="fonts">Choose a font:</label>
+      <select name="fonts" id="font" style="font-size: 16px;">
+        <option value="Impact">Impact</option>
+        <option value="Arial Black">Arial Black</option>
+        <option value="Agency fb">Agency fb</option>
+      </select>
+      
+      your text here: <input type="text" name="text" id="txt" style="font-size: 24px">
+      <br>
+      <button style="
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  padding-top: 10px;
+  border-radius: 4px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  " id="btn" type="submit">Add Text</button>
+      <button style="
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  " id="re" type="submit">Remove</button>
+      <h2 style="
+    text-align: left;
+    display: grid;
+    padding-right: 50px;
+    grid-template-columns: 140px 1fr;
+    font-weight: 100;
+    gap: 5px;
+">
+      Width: <input type="text" name="Width" id="wi">
+      
+      Height: <input type="text" name="Height" id="hi">
+      
+      Image Link: <input type="text" name="lil" id="li">
+      
+      <button style="
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 4px;
+  " id="adi">Add Image</button>
+    </h2>
+    </div>
+</div>
+<script>
+    
+      var stage = new Konva.Stage({
+        container: 'cont',
+        width: 550,
+        height: 500
+      });
+
+      var layer = new Konva.Layer();
+      
+      var Obj = new Image();
+      Obj.src = 'https://imgflip.com/s/meme/Drake-Hotline-Bling.jpg';
+      
+      var yoda = new Konva.Image({
+          x: 0,
+          y: 0,
+          image: Obj,
+          width: 550,
+          height: 500,
+          draggable: false,
+        });
+    document.getElementById("btn").addEventListener("click", update);
+    document.getElementById("re").addEventListener("click", relo);
+    document.getElementById("adi").addEventListener("click", imagea);
+
+    $("img.telp").click(function(){
+       var Obj = new Image();
+       Obj.src = $(this).attr('src');
+       var template = new Konva.Image({
+          x: 0,
+          y: 0,
+          image: Obj,
+          width: 550,
+          height: 500,
+          draggable: false,
+        });
+      layer.add(template);
+      stage.add(layer); 
+    });  
+    
+    function update(){
+      var size = document.getElementById("ageOutputId").value;
+      var txt = document.getElementById("txt").value;
+      var font = document.getElementById("font").value;
+      var text = new Konva.Text({
+        x: 300,
+        y: 10,
+        fontFamily: font,
+        fontSize: size,
+        text: txt,
+        fill: 'black',
+        draggable: true,
+      })
+      layer.add(text);
+      stage.add(layer); 
+    }
+      
+    function relo(){
+      location.reload();
+    }
+    
+    function imagea(){
+      var upim = new Image();
+      upim.src = document.getElementById("li").value;
+      width = document.getElementById("wi").value;
+      Height = document.getElementById("hi").value;
+      var img = new Konva.Image({
+          x: 10,
+          y: 10,
+          image: upim,
+          width: width,
+          height: Height,
+          draggable: true,
+        });
+      layer.add(img);
+      stage.add(layer);
+    }
+    
+    document.getElementById("teu").addEventListener("click", hidb);
+    document.getElementById("upl").addEventListener("click", tempup);
+
+    function hidb(){
+      $("#hed").toggle();
+      $("#upl").toggle();
+      $("#teu").toggle();
+    }
+    
+    function tempup(){
+      var tup = new Image();
+      tup.src = document.getElementById("tsrc").value;
+      var tupe = new Konva.Image({
+          x: 0,
+          y: 0,
+          image: tup,
+          width: 550,
+          height: 500,
+          draggable: false
+        });
+      layer.add(tupe);
+      stage.add(layer);
+    }
+
+    window.addEventListener('load', (event) =>{ 
+      layer.add(yoda);
+      alert("You can Drag the Text! when u add it  REMEBER IT!! ");
+      stage.add(layer); 
+    });
+    </script>
+</body>
+</html>
